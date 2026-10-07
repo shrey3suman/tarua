@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Taruwa — Delivery</title>
+
+  <style>
+    :root {
+      --bg: #f2eee4;
+      --paper: #fbfaf5;
+      --ink: #17221b;
+      --muted: #70786f;
+      --line: #d8d5ca;
+      --green: #294b39;
+      --green-dark: #1b3327;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    .page {
+      width: min(1050px, calc(100% - 40px));
+      margin: auto;
+      padding: 30px 0 80px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 90px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .stage {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      line-height: .88;
+      letter-spacing: -.08em;
+    }
+
+    .intro {
+      max-width: 600px;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .delivery-card {
+      margin-top: 70px;
+      padding: clamp(25px, 5vw, 55px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -.06em;
+      line-height: 1;
+    }
+
+    .project-description {
+      max-width: 650px;
+      margin-top: 18px;
+      color: #566058;
+      line-height: 1.6;
+    }
+
+    .result {
+      margin-top: 45px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .result-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .ready {
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .preview {
+      margin-top: 25px;
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #e7e3d8;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .preview span {
+      color: var(--green);
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 28px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 17px 27px;
+      background: var(--green);
+      color: white;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+      transition: .18s ease;
+    }
+
+    button:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+    }
+
+    button:disabled {
+      opacity: .7;
+      cursor: default;
+      transform: none;
+    }
+
+    .confirmation {
+      display: none;
+      margin-top: 22px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #e5eadf;
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    @media (max-width: 650px) {
+      .page {
+        width: min(100% - 28px, 1050px);
+      }
+
+      header {
+        padding-bottom: 60px;
+      }
+
+      .result-top,
+      .footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .actions button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header>
+      <div class="logo">TARUWA</div>
+      <div class="stage">04 / DELIVERY</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Made</div>
+
+      <h1>It's ready.</h1>
+
+      <p class="intro">
+        The work is finished, checked, and ready to leave Taruwa
+        and become yours.
+      </p>
+    </section>
+
+    <section class="delivery-card">
+
+      <div class="label">Final project</div>
+
+      <h2>Digital Wedding Invitation</h2>
+
+      <p class="project-description">
+        A custom digital invitation experience designed,
+        built and prepared for sharing with your guests.
+      </p>
+
+      <div class="result">
+
+        <div class="result-top">
+          <strong>Final deliverable</strong>
+          <span class="ready">● Ready</span>
+        </div>
+
+        <div class="preview">
+          <span>
+            YOUR INVITATION<br>
+            LIVES HERE
+          </span>
+        </div>
+
+        <div class="actions">
+          <button id="deliverButton">
+            DELIVER PROJECT →
+          </button>
+        </div>
+
+        <div class="confirmation" id="confirmation">
+          ✓ Delivered successfully. This project has completed the
+          Taruwa pipeline.
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <span>TARUWA</span>
+      <span>We make things.</span>
+    </footer>
+
+  </main>
+
+  <script>
+    const button = document.getElementById("deliverButton");
+    const confirmation = document.getElementById("confirmation");
+
+    button.addEventListener("click", () => {
+      button.textContent = "DELIVERED ✓";
+      button.disabled = true;
+      confirmation.style.display = "block";
+
+      console.log("TARUWA: Project delivered.");
+    });
+  </script>
+
+</body>
+</html>

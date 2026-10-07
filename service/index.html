@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Taruwa — Service</title>
+
+  <style>
+    :root {
+      --bg: #f2eee4;
+      --paper: #fbfaf5;
+      --ink: #17221b;
+      --muted: #70786f;
+      --line: #d8d5ca;
+      --green: #294b39;
+      --green-dark: #1b3327;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    .page {
+      width: min(1100px, calc(100% - 40px));
+      margin: auto;
+      padding: 30px 0 80px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 80px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .stage {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 900px;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: .9;
+      letter-spacing: -.075em;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .workspace {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 30px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -.05em;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #566058;
+      line-height: 1.6;
+    }
+
+    .progress {
+      display: grid;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .number {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      font-size: .75rem;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    .step.done .number {
+      background: var(--green-dark);
+    }
+
+    .step.active {
+      border-color: var(--green);
+    }
+
+    .status {
+      margin-top: 30px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #e8e5d9;
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .actions {
+      margin-top: 35px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 16px 24px;
+      background: var(--green);
+      color: white;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--green-dark);
+    }
+
+    button:disabled {
+      opacity: .6;
+      cursor: default;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .deliverable {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .deliverable:last-child {
+      border-bottom: 0;
+    }
+
+    .tag {
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 28px, 1100px);
+      }
+
+      header {
+        padding-bottom: 55px;
+      }
+
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .full {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header>
+      <div class="logo">TARUWA</div>
+      <div class="stage">03 / SERVICE</div>
+    </header>
+
+    <section>
+      <div class="eyebrow">Now we make it</div>
+
+      <h1>Turn the direction into something real.</h1>
+
+      <p class="intro">
+        This is where Taruwa stops talking about the idea
+        and starts building the actual thing.
+      </p>
+    </section>
+
+    <section class="workspace">
+
+      <div class="card">
+        <div class="label">Project</div>
+
+        <h2>Digital Wedding Invitation</h2>
+
+        <p>
+          A distinctive digital invitation built around the couple,
+          their story, their events and the experience they want guests to have.
+        </p>
+
+        <div class="status">
+          ● Production in progress
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label">Production</div>
+
+        <div class="progress">
+
+          <div class="step done">
+            <div class="number">✓</div>
+            <strong>Direction confirmed</strong>
+          </div>
+
+          <div class="step active">
+            <div class="number">2</div>
+            <strong>Building the experience</strong>
+          </div>
+
+          <div class="step">
+            <div class="number">3</div>
+            <strong>Quality check</strong>
+          </div>
+
+          <div class="step">
+            <div class="number">4</div>
+            <strong>Ready for delivery</strong>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card full">
+
+        <div class="label">What Taruwa is producing</div>
+
+        <div class="deliverable">
+          <strong>Visual system</strong>
+          <span class="tag">Building</span>
+        </div>
+
+        <div class="deliverable">
+          <strong>Responsive invitation experience</strong>
+          <span class="tag">Building</span>
+        </div>
+
+        <div class="deliverable">
+          <strong>Motion & interaction</strong>
+          <span class="tag">Next</span>
+        </div>
+
+        <div class="deliverable">
+          <strong>RSVP experience</strong>
+          <span class="tag">Next</span>
+        </div>
+
+        <div class="actions">
+          <button id="finishButton">
+            COMPLETE SERVICE →
+          </button>
+        </div>
+
+        <p id="completeMessage" style="display:none; margin-top:20px;">
+          Service complete. The project is ready for DELIVERY.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    const finishButton = document.getElementById("finishButton");
+    const completeMessage = document.getElementById("completeMessage");
+
+    finishButton.addEventListener("click", () => {
+      finishButton.textContent = "SERVICE COMPLETE ✓";
+      finishButton.disabled = true;
+
+      completeMessage.style.display = "block";
+
+      console.log("TARUWA: Service completed.");
+    });
+  </script>
+
+</body>
+</html>

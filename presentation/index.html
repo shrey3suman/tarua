@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Taruwa — Presentation</title>
+
+  <style>
+    :root {
+      --bg: #f2eee4;
+      --paper: #fbfaf5;
+      --ink: #17221b;
+      --muted: #70786f;
+      --line: #d8d5ca;
+      --green: #294b39;
+      --green-dark: #1b3327;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, sans-serif;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: min(1100px, calc(100% - 40px));
+      margin: auto;
+      padding: 30px 0 80px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 80px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .stage {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 900px;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: .9;
+      letter-spacing: -.075em;
+    }
+
+    .intro {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin-top: 30px;
+    }
+
+    .proposal {
+      margin-top: 70px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(25px, 5vw, 55px);
+    }
+
+    .section {
+      padding: 35px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-child {
+      border-bottom: 0;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+
+    .description {
+      max-width: 720px;
+      margin-top: 14px;
+      color: #4e5750;
+    }
+
+    .deliverables {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .deliverable {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.35);
+    }
+
+    .timeline {
+      display: flex;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .time {
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      flex: 1;
+    }
+
+    .time strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: .9rem;
+      max-width: 500px;
+    }
+
+    .approve {
+      border: 0;
+      background: var(--green);
+      color: white;
+      padding: 17px 25px;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .approve:hover {
+      background: var(--green-dark);
+    }
+
+    .status {
+      display: none;
+      margin-top: 18px;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: min(100% - 28px, 1100px);
+      }
+
+      header {
+        padding-bottom: 55px;
+      }
+
+      .deliverables,
+      .timeline {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .bottom {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .approve {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header>
+      <div class="logo">TARUWA</div>
+      <div class="stage">02 / PRESENTATION</div>
+    </header>
+
+    <section>
+      <div class="eyebrow">Here's what we understood</div>
+
+      <h1>Let's make something worth keeping.</h1>
+
+      <p class="intro">
+        We take the messy idea you brought us and turn it into
+        a clear direction for what we're actually going to make.
+      </p>
+    </section>
+
+    <article class="proposal">
+
+      <div class="section">
+        <div class="label">The project</div>
+
+        <h2 id="projectTitle">
+          Digital Wedding Invitation
+        </h2>
+
+        <p class="description" id="projectDescription">
+          A distinctive digital wedding invitation that feels personal,
+          looks beautiful on mobile, and goes beyond a static card.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="label">What we'll make</div>
+
+        <div class="deliverables">
+
+          <div class="deliverable">
+            <strong>01 — Visual direction</strong>
+            <p>Custom typography, composition and visual language.</p>
+          </div>
+
+          <div class="deliverable">
+            <strong>02 — Digital experience</strong>
+            <p>A responsive invitation designed for phones and sharing.</p>
+          </div>
+
+          <div class="deliverable">
+            <strong>03 — Motion</strong>
+            <p>Subtle animation and interaction where it adds meaning.</p>
+          </div>
+
+          <div class="deliverable">
+            <strong>04 — RSVP</strong>
+            <p>A simple way for guests to respond to the invitation.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">How we'll approach it</div>
+
+        <h2>Understand → Create → Refine → Deliver</h2>
+
+        <p class="description">
+          We'll start from the actual story and preferences,
+          build the first direction, refine it with you,
+          then turn the finished work into something ready to use.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="label">Timeline</div>
+
+        <div class="timeline">
+          <div class="time">
+            <strong>01</strong>
+            Direction
+          </div>
+
+          <div class="time">
+            <strong>02</strong>
+            Creation
+          </div>
+
+          <div class="time">
+            <strong>03</strong>
+            Refinement
+          </div>
+
+          <div class="time">
+            <strong>04</strong>
+            Delivery
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom">
+
+        <p class="note">
+          This is the proposed direction. Once approved,
+          the project moves into the Service stage.
+        </p>
+
+        <div>
+          <button class="approve" id="approveButton">
+            APPROVE DIRECTION →
+          </button>
+
+          <p class="status" id="status">
+            Direction approved. Moving to SERVICE.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <script>
+    const approveButton = document.getElementById("approveButton");
+    const status = document.getElementById("status");
+
+    approveButton.addEventListener("click", () => {
+      approveButton.textContent = "APPROVED ✓";
+      approveButton.disabled = true;
+      status.style.display = "block";
+
+      console.log("TARUWA: Presentation approved.");
+    });
+  </script>
+
+</body>
+</html>

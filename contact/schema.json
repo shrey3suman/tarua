@@ -1,0 +1,22 @@
+{
+  "projectId": "",
+  "createdAt": "",
+  "status": "new",
+
+  "client": {
+    "name": "",
+    "email": "",
+    "phone": "",
+    "preferredContact": "email"
+  },
+
+  "project": {
+    "title": "",
+    "whatToMake": "",
+    "description": "",
+    "deadline": "",
+    "budget": "",
+    "references": [],
+    "specialRequests": ""
+  }
+}
